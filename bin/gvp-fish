@@ -10,7 +10,7 @@
 
 # A fail function, called to bail out of the process with an exit status of 1.
 function fail
-  echo "Error: `gvp-fish alias`, gvp-fish in`, and `gvp-fish out` are the only supported commands."
+  echo "Error: gvp-fish in` and `gvp-fish out` are the only supported commands."
   exit 1
 end
 
@@ -25,11 +25,6 @@ end
 
 
 switch $argv
-  case 'alias'
-    function gvp-fish
-      source /usr/local/bin/gvp-fish $argv
-    end
-
   case 'in'
     # Backup old go paths
     set --export GVP_OLD_GOPATH $GOPATH
