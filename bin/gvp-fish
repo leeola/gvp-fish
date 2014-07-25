@@ -31,8 +31,6 @@ switch $argv
     end
 
   case 'in'
-    echo $GOPATH
-
     # Backup old go paths
     set --export GVP_OLD_GOPATH $GOPATH
     set --export GVP_OLD_GOBIN  $GOBIN
